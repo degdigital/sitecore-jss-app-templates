@@ -3,8 +3,8 @@
 To scaffold a new JSS project using this starter application, in a terminal, run:
 
 * `npm install -g @sitecore-jss/sitecore-jss-cli` to install the JSS CLI tools.
-* `jss create APPNAMEHERE react --repository degdigital/sitecore-jss-app-templates` to scaffold the app.
-* `npm install` to install dependencies.
+* `jss create [APPNAME] react --repository degdigital/sitecore-jss-app-templates` to scaffold the app.
+* `cd [APPNAME]` to change to newly created app directory.
 * `jss start` to start the app in disconnected mode.
 * `npm run storybook` to start Storybook.
 
