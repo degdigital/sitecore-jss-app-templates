@@ -1,5 +1,6 @@
 import React, { cloneElement, Children } from 'react';
-import { configure, addDecorator } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
+import { withA11y } from '@storybook/addon-a11y';
 import '../src/css/app.css';
 
 const createFieldsObject = fields => {
@@ -25,7 +26,4 @@ const StoryContainer = ({ storyProps, children }) => {
 };
 
 addDecorator(story => <StoryContainer storyProps={story().props}>{story()}</StoryContainer>);
-
-
-// automatically import all files ending in *.stories.js
-configure(require.context('../src', true, /\.stories\.js$/), module);
+addDecorator(withA11y);
