@@ -74,6 +74,7 @@ function scaffoldComponent() {
   const exportVarName = componentName.replace(/[^\w]+/g, '');
 
   const componentTemplate = `import React from 'react';
+import PropTypes from 'prop-types';
 import { Text } from '@sitecore-jss/sitecore-jss-react';
 
 const ${exportVarName} = (props) => (
@@ -82,6 +83,16 @@ const ${exportVarName} = (props) => (
     <Text field={props.fields.heading} />
   </div>
 );
+
+${exportVarName}.propTypes = {
+  fields: PropTypes.object.isRequired
+};
+
+${exportVarName}.defaultProps = {
+  fields: {
+    heading: 'Default Heading'
+  }
+};
 
 export default ${exportVarName};
 `;
