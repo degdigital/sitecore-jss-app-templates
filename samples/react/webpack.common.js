@@ -25,14 +25,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                  {
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                      hmr: process.env.NODE_ENV === 'development',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: process.env.NODE_ENV === 'development',
+                        },
                     },
-                  },
-                  'css-loader',
-                  'postcss-loader'
+                    'css-loader',
+                    'postcss-loader'
                 ]
             },
             {
@@ -42,6 +42,16 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        alias: {
+            App: path.resolve(__dirname, 'src'),
+            Components: path.resolve(__dirname, 'src/components/'),
+            Config: path.resolve(__dirname, 'src/config/'),
+            Routes: path.resolve(__dirname, 'src/routes/'),
+            Services: path.resolve(__dirname, 'src/services/'),
+            Utils: path.resolve(__dirname, 'src/utils/')
+        }
     },
     output: {
         filename: '[name].bundle.js',
