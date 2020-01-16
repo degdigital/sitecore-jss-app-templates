@@ -13,6 +13,7 @@ const chalk = require('chalk');
 /*
   SCAFFOLDING SCRIPT
 */
+
 const componentName = process.argv[2];
 
 if (!componentName) {
@@ -114,29 +115,65 @@ export default ${exportVarName};
 }
 
 function scaffoldStory(exportVarName, outputDirectoryPath) {
-  const storyTemplate = `import React from 'react';
-    import { default as ${exportVarName} } from './index.js';
-  
-    export default {
-        title: 'Components/${exportVarName}'
-    };
-  
-    const fields = {
-        heading: {
-            value: 'Sample Heading'
-        }
-    };
-  
-    export const component = () => <${exportVarName} fields={fields} />;
-  
-    component.story = {
-        name: 'Example'
-    };
-  `;
-
-  const outputFilePath = path.join(outputDirectoryPath, `${componentName}.stories.js`);
+  const flag = process.argv[3];
+  let storyExtension;
+  let storyTemplate;
+  if (flag && flag === '--mdx') {
+    storyExtension = 'mdx';
+    storyTemplate = getMdxStoryTemplate(exportVarName);
+  } else {
+    storyExtension = 'js';
+    storyTemplate = getCsfStoryTemplate(exportVarName);
+  }
+  const outputFilePath = path.join(outputDirectoryPath, `${componentName}.stories.${storyExtension}`);
 
   fs.writeFileSync(outputFilePath, storyTemplate, 'utf8');
+}
+
+function getMdxStoryTemplate(name) {
+  return `import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as ${name} } from './index.js';
+export const fields = {
+    heading: {
+        value: 'Sample Heading'
+    }
+};
+
+<Meta title="Components/${name}" component={${name}} />
+
+# ${name}
+This is the default example for the ${name} component.
+
+<Preview>
+    <Story name="Example">
+        <${name} fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={${name}} />
+`;
+}
+
+function getCsfStoryTemplate(name) {
+  return `import React from 'react';
+import { default as ${name} } from './index.js';
+
+export default {
+    title: 'Components/${name}'
+};
+
+const fields = {
+    heading: {
+        value: 'Sample Heading'
+    }
+};
+
+export const component = () => <${name} fields={fields} />;
+
+component.story = {
+    name: 'Example'
+};`;
 }
 
 function scaffoldManifest() {
@@ -161,8 +198,7 @@ export default function(manifest) {
     placeholders: ['exposed-placeholder-name']
     */
   });
-}
-`;
+}`;
 
   const outputFilePath = path.join(
     componentManifestDefinitionsPath,
