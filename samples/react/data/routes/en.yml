@@ -2,23 +2,23 @@ id: home-page
 fields:
   pageTitle: Home
 placeholders:
-  cacuweb-pagehead:
+  jss-pagehead:
     - componentName: Header
       placeholders:
-        cacuweb-header:
+        jss-header:
           - componentName: SiteLogo
           - componentName: PrimaryNav
           - componentName: UtilityNav
-  cacuweb-pagebody:
+  jss-pagebody:
     - componentName: TwoColumnLayout
       placeholders:
-        cacuweb-main:
+        jss-main:
           - componentName: ContentBlock
             fields:
               heading: Content Block, Main 
-        cacuweb-sidebar:
+        jss-sidebar:
           - componentName: ContentBlock
             fields:
               heading: Content Block, Sidebar
-  cacuweb-pagefoot:
+  jss-pagefoot:
     - componentName: Footer
