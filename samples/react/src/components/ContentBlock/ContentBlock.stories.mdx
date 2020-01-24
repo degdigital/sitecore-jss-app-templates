@@ -1,0 +1,17 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as ContentBlock } from './index.js';
+import storybookContent from 'Config/storybookContent.json';
+
+<Meta title="Components/ContentBlock" component={ContentBlock} />
+
+# ContentBlock
+This is the default example for the ContentBlock component.
+
+<Preview>
+    <Story name="Example">
+        <ContentBlock fields={storybookContent.field} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={ContentBlock} />

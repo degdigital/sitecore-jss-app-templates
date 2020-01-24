@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Footer, ContentBlock } from 'Components';
+import storybookContent from 'Config/storybookContent.json';
+
+<Meta title="Components/00-Frame/Footer" component={Footer} />
+
+# Footer
+This is the default example for the Footer component.
+
+<Preview>
+    <Story name="Example">
+        <Footer>
+            <ContentBlock fields={storybookContent.field} />
+        </Footer>
+    </Story>
+</Preview>
+
+## Props
+<Props of={Footer} />

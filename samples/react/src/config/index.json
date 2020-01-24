@@ -1,0 +1,11 @@
+{
+    "placeholders": {
+        "pagehead": "cacuweb-pagehead",
+        "pagebody": "cacuweb-pagebody",
+        "pagefoot": "cacuweb-pagefoot",
+        "header": "cacuweb-header",
+        "main": "cacuweb-main",
+        "sidebar": "cacuweb-sidebar",
+        "footer": "cacuweb-footer"
+    }
+}

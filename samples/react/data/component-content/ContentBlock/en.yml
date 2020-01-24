@@ -1,0 +1,5 @@
+id: content-block
+componentName: ContentBlock
+fields:
+  heading: ContentBlock Heading
+  content: ContentBlock Content

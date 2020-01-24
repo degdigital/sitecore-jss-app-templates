@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as PrimaryNav } from './index.js';
+export const fields = {
+    heading: {
+        value: 'Sample Heading'
+    }
+};
+
+<Meta title="Components/01-Navigation/Primary Nav" component={PrimaryNav} />
+
+# PrimaryNav
+This is the default example for the PrimaryNav component.
+
+<Preview>
+    <Story name="Example">
+        <PrimaryNav fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={PrimaryNav} />

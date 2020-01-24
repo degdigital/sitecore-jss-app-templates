@@ -1,0 +1,43 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { TwoColumnLayout, Column, ContentBlock } from 'Components';
+import { placeholders } from 'Config';
+import storybookContent from 'Config/storybookContent.json';
+
+<Meta 
+  title="Components/00-Frame/TwoColumnLayout" 
+  component={TwoColumnLayout}
+/>
+
+# TwoColumnLayout
+This is an example of the TwoColumnLayout component
+
+## Two Columns, Wide Left
+<Preview>
+  <Story name="Two Columns, Wide Left">
+    <TwoColumnLayout isWideLeft={true}>
+      <Column classNames={placeholders.main}>
+        <ContentBlock fields={storybookContent.mainColumnfield} />
+      </Column>
+      <Column classNames={placeholders.sidebar}>
+        <ContentBlock fields={storybookContent.sidebarColumnfield} />
+      </Column>
+    </TwoColumnLayout>
+  </Story>
+</Preview>
+
+## Two Columns, Wide Right
+<Preview>
+  <Story name="Two Columns, Wide Right">
+    <TwoColumnLayout isWideLeft={false}>
+      <Column classNames={placeholders.sidebar}>
+        <ContentBlock fields={storybookContent.sidebarColumnfield} />
+      </Column>
+      <Column classNames={placeholders.main}>
+        <ContentBlock fields={storybookContent.mainColumnfield} />
+      </Column>
+    </TwoColumnLayout>
+  </Story>
+</Preview>
+
+## Props
+<Props of={TwoColumnLayout} />

@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as UtilityNav } from './index.js';
+export const fields = {
+    heading: {
+        value: 'Sample Heading'
+    }
+};
+
+<Meta title="Components/01-Navigation/Utility Nav" component={UtilityNav} />
+
+# UtilityNav
+This is the default example for the UtilityNav component.
+
+<Preview>
+    <Story name="Example">
+        <UtilityNav fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={UtilityNav} />

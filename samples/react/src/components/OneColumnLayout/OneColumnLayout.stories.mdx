@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { OneColumnLayout, ContentBlock } from 'Components';
+import storybookContent from 'Config/storybookContent.json';
+
+<Meta title="Components/00-Frame/OneColumnLayout" component={OneColumnLayout} />
+
+# OneColumnLayout
+This is the default example for the OneColumnLayout component.
+
+<Preview>
+    <Story name="Example">
+        <OneColumnLayout>
+            <ContentBlock fields={storybookContent.field} />
+        </OneColumnLayout>
+    </Story>
+</Preview>
+
+## Props
+<Props of={OneColumnLayout} />

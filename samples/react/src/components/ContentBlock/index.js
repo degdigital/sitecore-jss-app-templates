@@ -1,17 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Text, RichText } from '@sitecore-jss/sitecore-jss-react';
 
-/**
- * A simple Content Block component, with a heading and rich text block.
- * This is the most basic building block of a content site, and the most basic
- * JSS component that's useful.
- */
 const ContentBlock = ({ fields }) => (
-  <React.Fragment>
-    <Text tag="h2" className="display-4" field={fields.heading} />
-
-    <RichText className="contentDescription" field={fields.content} />
-  </React.Fragment>
+  <div className="content-block">
+    {fields.heading && <Text tag="h2" className="content-block__heading" field={fields.heading} />}
+    {fields.content && <RichText className="content-block__description" field={fields.content} />}
+  </div>
 );
+
+ContentBlock.propTypes = {
+  heading: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+};
+
+ContentBlock.defaultProps = {
+  heading: 'ContentBlock Heading',
+  content: 'ContentBlock Content'
+};
 
 export default ContentBlock;

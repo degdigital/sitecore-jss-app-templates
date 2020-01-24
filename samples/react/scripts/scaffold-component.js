@@ -118,12 +118,12 @@ function scaffoldStory(exportVarName, outputDirectoryPath) {
   const flag = process.argv[3];
   let storyExtension;
   let storyTemplate;
-  if (flag && flag === '--mdx') {
-    storyExtension = 'mdx';
-    storyTemplate = getMdxStoryTemplate(exportVarName);
-  } else {
+  if (flag && flag === '--csf') {
     storyExtension = 'js';
     storyTemplate = getCsfStoryTemplate(exportVarName);
+  } else {
+    storyExtension = 'mdx';
+    storyTemplate = getMdxStoryTemplate(exportVarName);
   }
   const outputFilePath = path.join(outputDirectoryPath, `${componentName}.stories.${storyExtension}`);
 
