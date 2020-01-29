@@ -14,7 +14,7 @@ const Layout = ({ route }) => (
     </Helmet>
     <VisitorIdentification />
     <Placeholder name={placeholders.pagehead} rendering={route} />
-    <main className="site-main" role="main">
+    <main className="site-main" id="site-main" role="main">
       <Placeholder name={placeholders.pagebody} rendering={route} />
     </main>
     <Placeholder name={placeholders.pagefoot} rendering={route} />
