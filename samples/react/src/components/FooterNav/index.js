@@ -4,18 +4,18 @@ import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
 import { WrappedChildren } from 'Components';
 import { placeholders } from 'Config';
 
-const UtilityNav = ({ rendering, children, params }) => (
-  <nav className="utility-nav">
-    <ul className="utility-nav__list">
+const FooterNav = ({ rendering, children, params }) => (
+  <nav className="footer-nav">
+    <ul className="footer-nav__list">
       {children ?
         <WrappedChildren children={children} parentParams={params} /> :
-        <Placeholder name={placeholders.utilitynav} rendering={rendering} params={params} />
+        <Placeholder name={placeholders.footernav} rendering={rendering} params={params} />
       }
     </ul>
   </nav>
 );
 
-UtilityNav.propTypes = {
+FooterNav.propTypes = {
   rendering: PropTypes.object,
   children: PropTypes.oneOfType([
     PropTypes.object,
@@ -24,9 +24,9 @@ UtilityNav.propTypes = {
   params: PropTypes.object
 };
 
-UtilityNav.defaultProps = {
+FooterNav.defaultProps = {
   rendering: {},
   params: {}
 };
 
-export default UtilityNav;
+export default FooterNav;

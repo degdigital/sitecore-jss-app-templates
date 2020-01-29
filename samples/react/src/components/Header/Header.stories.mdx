@@ -1,6 +1,17 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { Footer, ContentBlock } from 'Components';
+import { Footer, SiteLogo, PrimaryNav, UtilityNav, NavItem } from 'Components';
 import storybookContent from 'Config/storybookContent.json';
+
+export const primaryNavParams = {
+  itemClassname: 'primary-nav__item',
+  linkClassname: 'primary-nav__link'
+};
+
+export const utilityNavParams = {
+  itemClassname: 'utility-nav__item',
+  linkClassname: 'utility-nav__link'
+};
+
 
 <Meta title="Components/00-Frame/Header" component={Header} />
 
@@ -8,11 +19,17 @@ import storybookContent from 'Config/storybookContent.json';
 This is the default example for the Header component.
 
 <Preview>
-    <Story name="Example">
-        <Header>
-            <ContentBlock fields={storybookContent.field} />
-        </Header>
-    </Story>
+  <Story name="Example">
+    <Header>
+      <SiteLogo />
+      <PrimaryNav params={primaryNavParams}>
+        {storybookContent.navItems.map(navItems => <NavItem key={navItems.link.id} fields={navItems} />)}
+      </PrimaryNav>
+      <UtilityNav params={utilityNavParams}>
+        {storybookContent.navItems.map(navItems => <NavItem key={navItems.link.id} fields={navItems} />)}
+      </UtilityNav>
+    </Header>
+  </Story>
 </Preview>
 
 ## Props

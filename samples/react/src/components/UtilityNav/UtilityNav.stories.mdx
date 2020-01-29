@@ -1,9 +1,10 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { default as UtilityNav } from './index.js';
-export const fields = {
-    heading: {
-        value: 'Sample Heading'
-    }
+import { UtilityNav, NavItem } from 'Components';
+import storybookContent from 'Config/storybookContent.json';
+
+export const params = {
+  itemClassname: 'primary-nav__item',
+  linkClassname: 'primary-nav__link'
 };
 
 <Meta title="Components/01-Navigation/Utility Nav" component={UtilityNav} />
@@ -12,9 +13,11 @@ export const fields = {
 This is the default example for the UtilityNav component.
 
 <Preview>
-    <Story name="Example">
-        <UtilityNav fields={fields} />
-    </Story>
+  <Story name="Example">
+    <UtilityNav params={params}>
+      {storybookContent.navItems.map(navItems => <NavItem key={navItems.link.id} fields={navItems} />)}
+    </UtilityNav>
+  </Story>
 </Preview>
 
 ## Props

@@ -1,6 +1,11 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { Footer, ContentBlock } from 'Components';
+import { Footer, SiteLogo, FooterNav, NavItem } from 'Components';
 import storybookContent from 'Config/storybookContent.json';
+
+export const params = {
+  itemClassname: 'footer-nav__item',
+  linkClassname: 'footer-nav__link'
+};
 
 <Meta title="Components/00-Frame/Footer" component={Footer} />
 
@@ -8,11 +13,14 @@ import storybookContent from 'Config/storybookContent.json';
 This is the default example for the Footer component.
 
 <Preview>
-    <Story name="Example">
-        <Footer>
-            <ContentBlock fields={storybookContent.field} />
-        </Footer>
-    </Story>
+  <Story name="Example">
+    <Footer>
+      <SiteLogo />
+      <FooterNav params={params}>
+        {storybookContent.navItems.map(navItems => <NavItem key={navItems.link.id} fields={navItems} />)}
+      </FooterNav>
+    </Footer>
+  </Story>
 </Preview>
 
 ## Props

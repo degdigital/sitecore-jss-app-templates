@@ -4,6 +4,9 @@
         "pagebody": "jss-pagebody",
         "pagefoot": "jss-pagefoot",
         "header": "jss-header",
+        "primarynav": "jss-primarynav",
+        "utilitynav": "jss-utilitynav",
+        "footernav": "jss-footernav",
         "main": "jss-main",
         "sidebar": "jss-sidebar",
         "footer": "jss-footer"

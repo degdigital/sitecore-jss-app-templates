@@ -22,5 +22,28 @@
         "content": {
             "value": "Sidebar Column Content"
         }
-    }
+    },
+    "navItems": [
+        {
+            "link": {
+                "id": "link1",
+                "href": "https://google.com",
+                "text": "Nav Item 1"
+            }
+        },
+        {
+            "link": {
+                "id": "link2",
+                "href": "https://google.com",
+                "text": "Nav Item 2"
+            }
+        },
+        {
+            "link": {
+                "id": "link3",
+                "href": "https://google.com",
+                "text": "Nav Item 3"
+            }
+        }
+    ]
 }
