@@ -1,0 +1,28 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as Button } from './index.js';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+
+<Meta 
+    title="Basics/Interface Elements/Buttons"
+    component={Button}
+    decorators={[withKnobs]}
+/>
+
+# Buttons
+
+## Button
+<Preview>
+    <Story name="Button">
+        <Button disabled={boolean('Disabled', false)} />
+    </Story>
+</Preview>
+
+## Button Alt
+<Preview>
+    <Story name="Button Alt">
+        <Button classNames="button--alt" disabled={boolean('Disabled', false)} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={Button} />
