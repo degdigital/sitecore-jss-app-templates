@@ -14,8 +14,8 @@
     "tunnelUrl": "http://jss.ngrok.io"
   },
   "engines": {
-    "node": ">=8.1",
-    "npm": ">=5.6.0",
+    "node": ">=12.16",
+    "npm": ">=6.13.4",
     "yarn": "yarn is not supported, please use npm"
   },
   "author": {
@@ -96,7 +96,8 @@
     "bootstrap:connected": "node scripts/bootstrap.js",
     "bootstrap:disconnected": "node scripts/bootstrap.js --disconnected",
     "build-storybook": "build-storybook -s public",
-    "jss": "jss",
+    "preinstall": "./nodeCheck.js",
+	"jss": "jss",
     "scaffold": "node scripts/scaffold-component.js",
     "start": "npm-run-all --serial bootstrap:disconnected --parallel start:react start:proxy start:watch-components",
     "start:connected": "scjss-verify-setup && npm-run-all --serial bootstrap:connected start:react start:watch-components",
