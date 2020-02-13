@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 /**
- * Checks the node version of the running process agoinst the one in package.json
+ * Checks the node version of the running process against the one in package.json
  * @note this only runs on npm install - not npm install <pacakge_name>
  */
 var path = require('path');
