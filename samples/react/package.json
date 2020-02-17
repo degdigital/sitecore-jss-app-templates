@@ -96,7 +96,6 @@
     "bootstrap:connected": "node scripts/bootstrap.js",
     "bootstrap:disconnected": "node scripts/bootstrap.js --disconnected",
     "build-storybook": "build-storybook -s public",
-    "preinstall": "./nodeCheck.js",
 	"jss": "jss",
     "scaffold": "node scripts/scaffold-component.js",
     "start": "npm-run-all --serial bootstrap:disconnected --parallel start:react start:proxy start:watch-components",
