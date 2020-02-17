@@ -15,7 +15,7 @@ try {
 	pkg = require(packageJson);
 } catch (err) {
 	console.error(err.message);
-	console.error('No package JSON file found'):
+	console.error('No package JSON file found');
 	process.exit(1);
 }
 
