@@ -1,7 +1,7 @@
 {
   "name": "sitecore-jss-app-template-react",
   "description": "Application template for Sitecore JSS and React.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "config": {
     "appName": "jss-app",
@@ -49,6 +49,8 @@
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
     "@babel/register": "~7.6.2",
+    "@degjs/storybook-addon-taffy": "^1.0.3",
+    "@degjs/storybook-decorator-sitecoreprops": "^1.0.4",
     "@sitecore-jss/sitecore-jss-cli": "^11.0.2",
     "@sitecore-jss/sitecore-jss-dev-tools": "^11.0.2",
     "@sitecore-jss/sitecore-jss-manifest": "^11.0.2",
@@ -57,7 +59,6 @@
     "@storybook/addon-docs": "^5.3.9",
     "@storybook/addon-knobs": "^5.3.9",
     "@storybook/addon-links": "^5.3.9",
-    "@storybook/addon-viewport": "^5.3.9",
     "@storybook/react": "^5.3.9",
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.3",
