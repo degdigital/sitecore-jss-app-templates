@@ -1,0 +1,15 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { ColorSwatches } from 'Components';
+import storybookContent from 'Config/storybookContent.json';
+
+<Meta title="Basics/Colors" component={ColorSwatches} />
+
+# Colors
+
+<Preview>
+    <Story name="Example">
+        <Column>
+            <ColorSwatches colors={storybookContent.colors} />
+        </Column>
+    </Story>
+</Preview>
