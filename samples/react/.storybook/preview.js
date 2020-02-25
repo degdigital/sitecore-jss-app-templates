@@ -3,6 +3,7 @@ import { addParameters, addDecorator } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withSitecoreProps } from '@degjs/storybook-decorator-sitecoreprops';
 import { withTaffy } from '@degjs/storybook-addon-taffy';
+import '../src/css/styleguide/styleguide.css';
 import '../src/css/app.css';
 
 addParameters({

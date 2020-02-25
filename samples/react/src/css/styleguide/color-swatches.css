@@ -1,0 +1,38 @@
+.sg-color-swatches {
+    padding: 1rem;
+}
+
+.sg-color-swatches__row {
+    margin-bottom: 1rem;
+}
+
+.sg-color-swatches__row-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.sg-color-swatches__row-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sg-color-swatch {
+    border: 1px solid var(--sg-color-gray-30);
+    flex-grow: 0;
+    margin-right: 1rem;
+    padding: 0.25rem 0.25rem 0;
+    text-align: center;
+}
+
+.sg-color-swatch__square {
+    border: 1px solid var(--sg-color-gray-30);
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+}
+
+.sg-color-swatch__name {
+    padding: 0.25rem;
+}
