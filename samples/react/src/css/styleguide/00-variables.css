@@ -1,9 +1,9 @@
 :root {
-    --color-white: #fff;
-    --color-black: #000;
+    --sg-color-white: #fff;
+    --sg-color-black: #000;
 
-    --color-gray-30: #ccc;
+    --sg-color-gray-30: #ccc;
 
-    --base-font-size: 1rem;
+    --sg-base-font-size: 1rem;
 
 }
