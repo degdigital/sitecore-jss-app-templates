@@ -1,4 +1,3 @@
-export { default as ColorSwatches } from './ColorSwatches';
 export { default as SiteLogo } from './SiteLogo';
 export { default as PrimaryNav } from './PrimaryNav';
 export { default as UtilityNav } from './UtilityNav';
