@@ -5,7 +5,7 @@ import { withTaffy } from '@degjs/storybook-addon-taffy';
 import '../src/css/styleguide/styleguide.css';
 import '../src/css/app.css';
 
-const cssReq = require.context('!!raw-loader!../src', true, /.\.css$/);
+const cssReq = require.context('!!raw-loader!../src/css/variables', true, /.\.css$/);
 const cssTokenFiles = cssReq.keys().map(filename => ({ filename, content: cssReq(filename).default }));
 
 addParameters({
