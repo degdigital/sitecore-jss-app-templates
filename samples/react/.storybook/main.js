@@ -8,6 +8,7 @@ module.exports = {
         '@storybook/addon-docs',
         '@storybook/addon-knobs/register',
         '@storybook/addon-links/register',
-        '@degjs/storybook-addon-taffy/register'
+        '@degjs/storybook-addon-taffy/register',
+        'storybook-design-token'
     ]
 };
