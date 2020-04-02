@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
-import { placeholders } from 'Config';
+import { placeholders } from '@config';
 
 const Main = ({ rendering, children }) => (
   <>

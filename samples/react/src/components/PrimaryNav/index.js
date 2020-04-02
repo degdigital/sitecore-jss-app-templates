@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
-import { WrappedChildren } from 'Components';
-import { placeholders } from 'Config';
+import { WrappedChildren } from '@components';
+import { placeholders } from '@config';
 
 const PrimaryNav = ({ rendering, children, params }) => (
   <nav className="primary-nav">

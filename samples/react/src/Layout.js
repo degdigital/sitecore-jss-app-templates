@@ -2,7 +2,7 @@ import React from 'react';
 import { VisitorIdentification } from '@sitecore-jss/sitecore-jss-react';
 import Helmet from 'react-helmet';
 import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
-import { placeholders } from 'Config';
+import { placeholders } from '@config';
 import './css/app.css';
 
 const Layout = ({ route }) => (

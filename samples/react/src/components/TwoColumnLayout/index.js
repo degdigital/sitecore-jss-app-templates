@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
-import { Column } from 'Components';
-import { placeholders } from 'Config';
+import { Column } from '@components';
+import { placeholders } from '@config';
 
 const TwoColumnLayout = ({ rendering, isWideLeft, children }) => (
   <div className={`page-wrapper columns columns--${isWideLeft ? 'wide-left' : 'wide-right'}`}>

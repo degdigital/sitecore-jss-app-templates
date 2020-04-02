@@ -28,12 +28,12 @@ module.exports = async ({ config }) => {
     ];
     config.resolve = {
         alias: {
-            App: path.resolve(__dirname, '../src'),
-            Components: path.resolve(__dirname, '../src/components/'),
-            Config: path.resolve(__dirname, '../src/config/'),
-            Routes: path.resolve(__dirname, '../src/routes/'),
-            Services: path.resolve(__dirname, '../src/services/'),
-            Utils: path.resolve(__dirname, '../src/utils/')
+            '@app': path.resolve(__dirname, '../src'),
+            '@components': path.resolve(__dirname, '../src/components/'),
+            '@config': path.resolve(__dirname, '../src/config/'),
+            '@routes': path.resolve(__dirname, '../src/routes/'),
+            '@services': path.resolve(__dirname, '../src/services/'),
+            '@utils': path.resolve(__dirname, '../src/utils/')
         }
     };
 
