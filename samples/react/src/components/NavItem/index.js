@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from '@sitecore-jss/sitecore-jss-react';
 
 const NavItem = ({ fields, params }) => (
   <li className={params.itemClassname}>
-    <Link field={fields.link} className={params.linkClassname} />
+    Link
   </li>
 );
 
@@ -14,9 +13,6 @@ NavItem.propTypes = {
 };
 
 NavItem.defaultProps = {
-  fields: {
-    link: null
-  },
   params: {
     itemClassname: null,
     linkClassname: null

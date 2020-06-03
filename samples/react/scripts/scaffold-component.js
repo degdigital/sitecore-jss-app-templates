@@ -13,7 +13,6 @@ const chalk = require('chalk');
 /*
   SCAFFOLDING SCRIPT
 */
-
 const componentName = process.argv[2];
 
 if (!componentName) {
@@ -75,7 +74,6 @@ function scaffoldComponent() {
   const exportVarName = componentName.replace(/[^\w]+/g, '');
 
   const componentTemplate = `import React from 'react';
-import PropTypes from 'prop-types';
 import { Text } from '@sitecore-jss/sitecore-jss-react';
 
 const ${exportVarName} = (props) => (
@@ -84,16 +82,6 @@ const ${exportVarName} = (props) => (
     <Text field={props.fields.heading} />
   </div>
 );
-
-${exportVarName}.propTypes = {
-  fields: PropTypes.object.isRequired
-};
-
-${exportVarName}.defaultProps = {
-  fields: {
-    heading: 'Default Heading'
-  }
-};
 
 export default ${exportVarName};
 `;
@@ -110,70 +98,7 @@ export default ${exportVarName};
 
   fs.writeFileSync(outputFilePath, componentTemplate, 'utf8');
 
-  scaffoldStory(exportVarName, outputDirectoryPath);
   return outputFilePath;
-}
-
-function scaffoldStory(exportVarName, outputDirectoryPath) {
-  const flag = process.argv[3];
-  let storyExtension;
-  let storyTemplate;
-  if (flag && flag === '--csf') {
-    storyExtension = 'js';
-    storyTemplate = getCsfStoryTemplate(exportVarName);
-  } else {
-    storyExtension = 'mdx';
-    storyTemplate = getMdxStoryTemplate(exportVarName);
-  }
-  const outputFilePath = path.join(outputDirectoryPath, `${componentName}.stories.${storyExtension}`);
-
-  fs.writeFileSync(outputFilePath, storyTemplate, 'utf8');
-}
-
-function getMdxStoryTemplate(name) {
-  return `import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { default as ${name} } from './index.js';
-export const fields = {
-    heading: {
-        value: 'Sample Heading'
-    }
-};
-
-<Meta title="Components/${name}" component={${name}} />
-
-# ${name}
-This is the default example for the ${name} component.
-
-<Preview>
-    <Story name="Example">
-        <${name} fields={fields} />
-    </Story>
-</Preview>
-
-## Props
-<Props of={${name}} />
-`;
-}
-
-function getCsfStoryTemplate(name) {
-  return `import React from 'react';
-import { default as ${name} } from './index.js';
-
-export default {
-    title: 'Components/${name}'
-};
-
-const fields = {
-    heading: {
-        value: 'Sample Heading'
-    }
-};
-
-export const component = () => <${name} fields={fields} />;
-
-component.story = {
-    name: 'Example'
-};`;
 }
 
 function scaffoldManifest() {
@@ -198,7 +123,8 @@ export default function(manifest) {
     placeholders: ['exposed-placeholder-name']
     */
   });
-}`;
+}
+`;
 
   const outputFilePath = path.join(
     componentManifestDefinitionsPath,

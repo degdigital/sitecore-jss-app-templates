@@ -10,12 +10,6 @@ export default function (manifest) {
   manifest.addComponent({
     name: 'NavItem',
     icon: SitecoreIcon.DocumentTag,
-    fields: [
-      {
-        name: 'link',
-        type: CommonFieldTypes.ItemLink
-      }
-    ],
     params: [
       'itemClassname',
       'linkClassname'

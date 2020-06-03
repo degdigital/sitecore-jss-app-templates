@@ -57,10 +57,20 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      '@app': path.resolve(__dirname, '../src'),
+      '@components': path.resolve(__dirname, '../src/components/'),
+      '@config': path.resolve(__dirname, '../src/config/'),
+      '@routes': path.resolve(__dirname, '../src/routes/'),
+      '@services': path.resolve(__dirname, '../src/services/'),
+      '@utils': path.resolve(__dirname, '../src/utils/')
+    }
+  },
   plugins: [
     // prevents the following warning during build:
     // > WARNING in ./node_modules/encoding/lib/iconv-loader.js
     // > Critical dependency: the request of a dependency is an expression
-    new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, () => {}),
+    new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, () => { }),
   ],
 };

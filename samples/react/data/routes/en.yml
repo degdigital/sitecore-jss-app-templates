@@ -14,20 +14,8 @@ placeholders:
             placeholders:
               jss-primarynav:
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Primary Nav Item 1
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Primary Nav Item 2
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Primary Nav Item 3
           - componentName: UtilityNav
             params:
               itemClassname: utility-nav__item
@@ -35,20 +23,8 @@ placeholders:
             placeholders:
               jss-utilitynav:
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Utility Nav Item 1
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Utility Nav Item 2
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Utility Nav Item 3
   jss-pagebody:
     - componentName: TwoColumnLayout
       placeholders:
@@ -71,17 +47,5 @@ placeholders:
             placeholders:
               jss-footernav:
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Footer Nav Item 1
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Footer Nav Item 2
                 - componentName: NavItem
-                  fields:
-                    link: 
-                      href: https://google.com
-                      text: Footer Nav Item 3

@@ -5,7 +5,7 @@ import { placeholders } from '@config';
 
 const Main = ({ rendering, children }) => (
   <>
-    {children || <Placeholder name={placeholders.main} rendering={props.rendering} />}
+    {children || <Placeholder name={placeholders.main} rendering={rendering} />}
   </>
 );
 
