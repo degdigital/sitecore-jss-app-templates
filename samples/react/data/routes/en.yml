@@ -31,11 +31,11 @@ placeholders:
         jss-main:
           - componentName: ContentBlock
             fields:
-              heading: Content Block, Main 
+              text: Content Block, Main 
         jss-sidebar:
           - componentName: ContentBlock
             fields:
-              heading: Content Block, Sidebar
+              text: Content Block, Sidebar
   jss-pagefoot:
     - componentName: Footer
       placeholders:

@@ -11,13 +11,9 @@ export default function (manifest) {
     name: 'ContentBlock',
     displayName: 'Content Block',
     // totally optional, but fun
-    icon: SitecoreIcon.DocumentTag,
+    icon: SitecoreIcon.Font,
     fields: [
-      {
-        name: 'heading',
-        type: CommonFieldTypes.SingleLineText
-      },
-      { name: 'content', type: CommonFieldTypes.RichText }
+      {name: 'text', type: CommonFieldTypes.RichText, displayName: 'Text' }
     ],
   });
 }
