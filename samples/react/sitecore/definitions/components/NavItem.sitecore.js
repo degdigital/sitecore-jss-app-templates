@@ -9,6 +9,7 @@ import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore
 export default function (manifest) {
   manifest.addComponent({
     name: 'NavItem',
+    displayName: 'Nav Item',
     icon: SitecoreIcon.DocumentTag,
     params: [
       'itemClassname',

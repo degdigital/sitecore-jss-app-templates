@@ -9,8 +9,11 @@ import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore
 export default function (manifest) {
   manifest.addComponent({
     name: 'SiteLogo',
-    icon: SitecoreIcon.DocumentTag,
-    fields: []
+    displayName: 'Site Logo',
+    icon: SitecoreIcon.Star,
+    fields: [
+      {name: 'logo', type: CommonFieldTypes.Image, displayName: 'Logo' }
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

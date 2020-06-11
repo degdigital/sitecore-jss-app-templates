@@ -10,6 +10,7 @@ import { placeholders } from '../../../src/config/index.json';
 export default function (manifest) {
   manifest.addComponent({
     name: 'FooterNav',
+    displayName: 'Footer Nav',
     icon: SitecoreIcon.DocumentTag,
     params: [
       'itemClassname',

@@ -10,6 +10,7 @@ import { placeholders } from '../../../src/config/index.json';
 export default function (manifest) {
   manifest.addComponent({
     name: 'PrimaryNav',
+    displayName: 'Primary Nav',
     icon: SitecoreIcon.DocumentTag,
     params: [
       'itemClassname',
