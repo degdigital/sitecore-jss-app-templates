@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as Breadcrumbs } from './index.js';
+export const fields = {
+    heading: {
+        value: 'Sample Heading'
+    }
+};
+
+<Meta title="Components/Breadcrumbs" component={Breadcrumbs} />
+
+# Breadcrumbs
+This is the default example for the Breadcrumbs component.
+
+<Preview>
+    <Story name="Example">
+        <Breadcrumbs fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={Breadcrumbs} />
