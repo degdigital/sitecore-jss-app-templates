@@ -1,0 +1,24 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as ContentPod } from './index.js';
+export const fields = {
+    headline: {
+        value: 'Sample Heading'
+    },
+    description: {
+        value: 'Sample Description'
+    }
+};
+
+<Meta title="Components/ContentPod" component={ContentPod} />
+
+# ContentPod
+This is the default example for the ContentPod component.
+
+<Preview>
+    <Story name="Example">
+        <ContentPod fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={ContentPod} />

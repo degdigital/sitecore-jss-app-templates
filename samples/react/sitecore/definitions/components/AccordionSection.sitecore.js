@@ -2,14 +2,19 @@
 import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-manifest';
 
 /**
- * Adds the Button component to the disconnected manifest.
+ * Adds the AccordionSection component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.js) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
-export default function (manifest) {
+export default function(manifest) {
   manifest.addComponent({
-    name: 'Button',
-    icon: SitecoreIcon.DocumentTag
+    name: 'AccordionSection',
+    displayName: 'Accordion Section',
+    icon: SitecoreIcon.RadioButton_unselected,
+    fields: [
+      { name: 'headline', displayName: 'Headline', type: CommonFieldTypes.SingleLineText },
+      { name: 'description', displayName: 'Description', type: CommonFieldTypes.RichText },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

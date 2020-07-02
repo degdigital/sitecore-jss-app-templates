@@ -10,6 +10,7 @@ import { placeholders } from '../../../src/config/index.json';
 export default function (manifest) {
   manifest.addComponent({
     name: 'TwoColumnLayout',
+    displayName: 'Two Column Layout',
     icon: SitecoreIcon.DocumentTag,
     placeholders: [
       placeholders.main,

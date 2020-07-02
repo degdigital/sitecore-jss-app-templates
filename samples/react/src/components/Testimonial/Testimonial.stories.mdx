@@ -1,0 +1,36 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as Testimonial } from './index.js';
+export const fields = {
+    headline: {
+        value: 'Sample Headline'
+    },
+    description: {
+        value: 'Sample Description'
+    },
+    name: {
+        value: 'Sample Name'
+    },
+    quote: {
+        value: 'Sample Quote'
+    },
+    jobTitle: {
+        value: 'Sample Job Title'
+    },
+    company: {
+        value: 'Sample Company'
+    },
+};
+
+<Meta title="Components/Testimonial" component={Testimonial} />
+
+# Testimonial
+This is the default example for the Testimonial component.
+
+<Preview>
+    <Story name="Example">
+        <Testimonial fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={Testimonial} />

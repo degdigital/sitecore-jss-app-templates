@@ -1,0 +1,24 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as AccordionSection } from './index.js';
+export const fields = {
+    headline: {
+        value: 'Sample Heading'
+    },
+    description: {
+        value: 'Sample Description'
+    }
+};
+
+<Meta title="Components/AccordionSection" component={AccordionSection} />
+
+# AccordionSection
+This is the default example for the AccordionSection component.
+
+<Preview>
+    <Story name="Example">
+        <AccordionSection fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={AccordionSection} />

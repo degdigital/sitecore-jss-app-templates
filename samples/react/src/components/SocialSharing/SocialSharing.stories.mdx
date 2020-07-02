@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as SocialSharing } from './index.js';
+export const fields = {
+    label: {
+        value: 'Sample Heading'
+    }
+};
+
+<Meta title="Components/SocialSharing" component={SocialSharing} />
+
+# SocialSharing
+This is the default example for the SocialSharing component.
+
+<Preview>
+    <Story name="Example">
+        <SocialSharing fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={SocialSharing} />

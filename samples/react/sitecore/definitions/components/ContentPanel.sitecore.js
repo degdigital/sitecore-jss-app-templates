@@ -2,19 +2,21 @@
 import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-manifest';
 
 /**
- * Adds the NavItem component to the disconnected manifest.
+ * Adds the ContentPanel component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.js) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
-export default function (manifest) {
+export default function(manifest) {
   manifest.addComponent({
-    name: 'NavItem',
-    displayName: 'Nav Item',
-    icon: SitecoreIcon.DocumentTag,
-    params: [
-      'itemClassname',
-      'linkClassname'
-    ]
+    name: 'ContentPanel',
+    displayName: 'Content Panel',
+    icon: SitecoreIcon.WindowFont,
+    fields: [
+      { name: 'headline', displayName: 'Headline', type: CommonFieldTypes.SingleLineText },
+      { name: 'body', displayName: 'BodyText', type: CommonFieldTypes.RichText },
+      { name: 'button', displayName: 'Button', type: CommonFieldTypes.GeneralLink },
+      { name: 'image', displayName: 'Image', type: CommonFieldTypes.Image },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

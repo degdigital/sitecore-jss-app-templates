@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { default as PullQuote } from './index.js';
+export const fields = {
+    quote: {
+        value: 'Sample Heading'
+    }
+};
+
+<Meta title="Components/PullQuote" component={PullQuote} />
+
+# PullQuote
+This is the default example for the PullQuote component.
+
+<Preview>
+    <Story name="Example">
+        <PullQuote fields={fields} />
+    </Story>
+</Preview>
+
+## Props
+<Props of={PullQuote} />
